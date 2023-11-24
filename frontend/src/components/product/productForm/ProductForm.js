@@ -39,7 +39,7 @@ const ProductForm = ({
             type="text"
             placeholder="Product name"
             name="name"
-            value={product?.name}
+            value={product?.name || ''}
             onChange={handleInputChange}
           />
 
@@ -48,7 +48,7 @@ const ProductForm = ({
             type="text"
             placeholder="Product Category"
             name="category"
-            value={product?.category}
+            value={product?.category || ''}
             onChange={handleInputChange}
           />
 
@@ -57,7 +57,7 @@ const ProductForm = ({
             type="text"
             placeholder="Product Price"
             name="price"
-            value={product?.price}
+            value={product?.price || ''}
             onChange={handleInputChange}
           />
 
@@ -66,7 +66,7 @@ const ProductForm = ({
             type="text"
             placeholder="Product Quantity"
             name="quantity"
-            value={product?.quantity}
+            value={product?.quantity || ''}
             onChange={handleInputChange}
           />
           <label>Production Date:</label>
@@ -74,7 +74,7 @@ const ProductForm = ({
             type="text"
             placeholder="YYYY-MM-DD"
             name="production_date"
-            value={product?.production_date}
+            value={product?.production_date || ''}
             onChange={handleInputChange}
           />
           <label>Expiry Date:</label>
@@ -82,7 +82,7 @@ const ProductForm = ({
             type="text"
             placeholder="YYYY-MM-DD"
             name="expiry_date"
-            value={product?.expiry_date}
+            value={product?.expiry_date || ''}
             onChange={handleInputChange}
           />
           <label>Product Description:</label>
@@ -91,7 +91,7 @@ const ProductForm = ({
               rows="10"
               name="description"
               placeholder="Product Description"
-              value={product?.description}
+              value={product?.description || ''}
               onChange={handleInputChange}
               style={{width: "100%"}}
             ></textarea>

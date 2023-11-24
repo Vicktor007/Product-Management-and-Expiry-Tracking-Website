@@ -22,6 +22,7 @@ const EditProduct = () => {
   const [product, setProduct] = useState(productEdit);
   const [productImage, setProductImage] = useState("");
   const [imagePreview, setImagePreview] = useState(null);
+  
  
 
   useEffect(() => {
