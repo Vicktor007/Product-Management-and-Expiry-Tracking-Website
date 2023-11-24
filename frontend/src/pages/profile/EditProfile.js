@@ -111,15 +111,7 @@ const EditProfile = () => {
               <br />
               <code>Email cannot be changed.</code>
             </p>
-            {/* <p>
-              <label>Phone:</label>
-              <input
-                type="text"
-                name="phone"
-                value={profile?.phone}
-                onChange={handleInputChange}
-              />
-            </p> */}
+            
             <p>
               <label>Bio:</label>
               <textarea
