@@ -1,5 +1,5 @@
 import React from "react";
-import { BiLogIn, BiLogOut } from "react-icons/bi";
+import { BiLogIn } from "react-icons/bi";
 import {  MdOutlineContactSupport, MdOutlineLocalGroceryStore, MdOutlinePersonAddAlt } from "react-icons/md";
 import { CgProfile } from "react-icons/cg";
 import { GoInfo } from "react-icons/go";
@@ -9,7 +9,7 @@ import { ShowOnLogin, ShowOnLogout } from "../protect/HiddenLink";
 
 
 const activeLink = ({ isActive }) => (isActive ? "active" : "link");
-// const activeSublink = ({ isActive }) => (isActive ? "active" : "link");
+
 
 const SidebarItem = ({ isOpen }) => {
   
