@@ -9,17 +9,19 @@ import { ShowOnLogin, ShowOnLogout } from "../protect/HiddenLink";
 
 
 const activeLink = ({ isActive }) => (isActive ? "active" : "link");
-
+const isActive = false;
 
 const SidebarItem = ({ isOpen }) => {
   
 
   return (
-     <div className="navbar-nav bg-general ">
-        <ShowOnLogout>
-            <NavLink
+     <div className="navbar-nav bg-general -pt">
+        <ShowOnLogout >
+           
+              <NavLink
             to={`/register/`}
-            className={ activeLink }
+            className={`${activeLink({isActive})} -pt1`}
+
           >
             <div className="sidebar-item s-parent">
           <div className="sidebar-title">
@@ -34,6 +36,7 @@ const SidebarItem = ({ isOpen }) => {
           <NavLink
             to={`/login/`}
             className={ activeLink }
+            
           >
             <div className="sidebar-item s-parent">
           <div className="sidebar-title">

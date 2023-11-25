@@ -366,6 +366,11 @@ p {
   padding: 0 2rem;
 }
 
+.width-in {
+  width: 100%;
+  max-width: 120px;
+}
+
 .--btn {
   font-size: 1.6rem;
   font-weight: 400;

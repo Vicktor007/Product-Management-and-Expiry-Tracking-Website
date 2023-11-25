@@ -22,8 +22,8 @@ const Sidebar = ({ children }) => {
   return (
     <div className="layout">
       <div className="sidebar" style={{ width: isOpen ? "230px" : "60px" }}>
-        <div className="top_section">
-          <div className="logo" style={{ display: isOpen ? "block" : "none" }}>
+        <div className="top_section bg-general">
+          <div className="logo" style={{ display: isOpen ? "block" : "none" }} >
           <RiEmphasis
               size={30}
               style={{ cursor: "pointer" }}
@@ -33,15 +33,15 @@ const Sidebar = ({ children }) => {
 
           <div
             className="bars"
-            style={{ marginLeft: isOpen ? "100px" : "0px" }}
+            style={{ marginLeft: isOpen ? "1px" : "0px" }}
           >
             <HiMenuAlt3 onClick={toggle} />
           </div>
         </div>
-        <div className="navbar-nav bg-general ">
+        <div className="navbar-nav bg-general">
         
             
-          <SidebarItem isOpen={isOpen}/>
+          <SidebarItem isOpen={isOpen} />
         
             </div>
         

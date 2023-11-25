@@ -18,7 +18,7 @@ const Logout = ({classes, isOpen}) => {
 
   return (
     <>
-    <button onClick={logout} className={`--btn --btn-danger ${classes}`}>
+    <button onClick={logout} className={`--btn --btn-danger width-in ${classes}`}>
       <span className="icon"><BiLogOut /></span>
       {isOpen && <span>Logout</span> }
           
