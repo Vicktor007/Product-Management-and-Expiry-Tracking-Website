@@ -110,11 +110,11 @@ let displayExpiryDate = expiryDate === "expired" ? "expired" : expiryString;
               {product.production_date}
             </p>
             <p>
-  <b>&rarr; Expiry Date : </b> {product.expiry_date} </p>
+              <b>&rarr; Expiry Date : </b> {product.expiry_date} </p>
             <p>
-  <b>&rarr; Expires in : </b> 
-  {displayExpiryDate}
-</p>
+               <b>&rarr; Expires in : </b> 
+               {displayExpiryDate}
+            </p>
 
             <hr />
             <p>{product.description}</p>
