@@ -20,13 +20,27 @@ const storage = new CloudinaryStorage({
 
 //   specify file fomat that can be saved
 
-function fileFilter (req, file, cb) {
-    if (file.mimetype.startsWith('image/')) {
-        cb(null, true);  // accept the file
-    } else {
-        cb(null, false);  // reject the file
-    }  
-}
+// const fileFilter (req, file, cb) {
+    // if (file.mimetype.startsWith('image/')) {
+        // cb(null, true);  // accept the file
+    // } else {
+        // cb(null, false);  // reject the file
+    // }  
+// }
+
+const fileFilter = (req, file, cb) => {
+  const filetypes = /jpe?g|png|webp/;
+  const mimetypes = /image\/jpe?g|image\/png|image\/webp/;
+
+  const extname = path.extname(file.originalname).toLowerCase();
+  const mimetype = file.mimetype;
+
+  if (filetypes.test(extname) && mimetypes.test(mimetype)) {
+    cb(null, true);
+  } else {
+    cb(new Error("Images only"), false);
+  }
+};
 
 
 const upload = multer({ storage, fileFilter });
