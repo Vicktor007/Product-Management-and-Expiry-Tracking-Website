@@ -90,6 +90,24 @@ export const getProduct = createAsyncThunk(
     }
   }
 );
+// Get a product detail for non users
+export const getProductDetails = createAsyncThunk(
+  "products/getProductdetails",
+  async (id, thunkAPI) => {
+    try {
+      return await productService.getProductDetails(id);
+    } catch (error) {
+      const message =
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
+        error.message ||
+        error.toString();
+      console.log(message);
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
 // Update product
 export const updateProduct = createAsyncThunk(
   "products/updateProduct",
@@ -232,6 +250,26 @@ const productSlice = createSlice({
         state.message = action.payload;
         toast.error(action.payload);
       })
+
+
+      .addCase(getProductDetails.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getProductDetails.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.isError = false;
+        state.product = action.payload;
+      })
+      .addCase(getProductDetails.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
+        toast.error(action.payload);
+      })
+
+
+
       .addCase(updateProduct.pending, (state) => {
         state.isLoading = true;
       })

@@ -21,6 +21,7 @@ import Profile from "./pages/profile/Profile";
 import EditProfile from "./pages/profile/EditProfile";
 import Contact from "./pages/contact/Contact";
 import About from "./pages/about/About";
+import LimitedProductDetail from "./components/product/productDetail/LimitedProductDetails";
 
 axios.defaults.withCredentials = true;
 
@@ -87,6 +88,16 @@ function App() {
             </Sidebar>
           }
         />
+
+<Route
+          path="/li-productdetail/:id"
+          element={
+              <Layout>
+                <LimitedProductDetail />
+              </Layout>
+          }
+        />
+
         <Route
           path="/edit-product/:id"
           element={

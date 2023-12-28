@@ -10,7 +10,7 @@ import calculateExpiryDate from '../../../utilities/expiry';
 import stockStatus from '../../../utilities/stockStatus';
 import "./ProductDetail.scss";
 import { toast } from "react-toastify";
-import QRCodeGenerator from "../../qrcode/QrcodeGenerator";
+
 
 
 
@@ -128,17 +128,18 @@ let displayExpiryDate = expiryDate === "expired" ? "expired" : expiryString;
             <code className="--color-dark">
               Last Updated: {product.updatedAt.toLocaleString("en-US")}
             </code>
+            <div>
             <Link to={`/edit-product/${id}`} className="edit" >
             Edit Product
             </Link>
+            <Link to={`/li-productdetail/${id}`} className="edit" >
+            Create Product QRcode
+            </Link>
+            </div>
           </div>
           
         )}
       </Card>
-     
-                        
-                       
-      <QRCodeGenerator/>
                         
     </div>
   );

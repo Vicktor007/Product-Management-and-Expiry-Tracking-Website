@@ -19,7 +19,7 @@
   background: #3498DB;
 }
 .qrwrapper{
-  margin: auto;
+  /* margin: auto; */
   margin-top: 50px;
   height: 265px;
   max-width: 410px;
