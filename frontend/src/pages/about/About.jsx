@@ -9,7 +9,7 @@ export default function About() {
       <h1>About</h1>
       <h3>
         Welcome to the product expiry tracker management App.
-        This application is designed to help you manage and track product expiry date for business products.
+        This application is designed to help you manage and track products and  expiry date for business products.
       </h3>
       <ol className="text-primary">
         <li>

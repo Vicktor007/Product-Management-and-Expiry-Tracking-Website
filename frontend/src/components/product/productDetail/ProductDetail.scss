@@ -3,10 +3,14 @@
   margin-bottom: 5rem;
   width: 100%;
   max-width: 500px;
+  border: 1px solid red;
+  height: 200vh;
   .card {
     width: 100%;
     max-width: 500px;
     padding: 1rem;
+    border: 1px solid red;
+    
   }
   .detail {
     & > * {
